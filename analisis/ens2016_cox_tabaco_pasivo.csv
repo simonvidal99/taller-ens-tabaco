@@ -1,0 +1,17 @@
+covariate,modelo,HR,IC_inf,IC_sup,p,n,muertes
+pasivo,A. 4 grupos (ref: nunca fumó y sin exposición),0.632,0.345,1.158,0.138,6233,539
+ex_,A. 4 grupos (ref: nunca fumó y sin exposición),1.327,0.99,1.779,0.059,6233,539
+act,A. 4 grupos (ref: nunca fumó y sin exposición),2.035,1.43,2.895,0.0,6233,539
+edad,A. 4 grupos (ref: nunca fumó y sin exposición),1.105,1.093,1.118,0.0,6233,539
+mujer,A. 4 grupos (ref: nunca fumó y sin exposición),0.82,0.62,1.084,0.163,6233,539
+exp_any,B. Solo nunca fumadores: expuesto vs no,0.653,0.352,1.209,0.175,3017,269
+edad,B. Solo nunca fumadores: expuesto vs no,1.113,1.097,1.13,0.0,3017,269
+mujer,B. Solo nunca fumadores: expuesto vs no,0.839,0.588,1.199,0.336,3017,269
+exp_casa,C. Solo nunca fumadores: por ambiente,1.211,0.48,3.056,0.685,3017,269
+exp_trab,C. Solo nunca fumadores: por ambiente,0.946,0.395,2.264,0.9,3017,269
+exp_otro,C. Solo nunca fumadores: por ambiente,0.461,0.18,1.18,0.106,3017,269
+edad,C. Solo nunca fumadores: por ambiente,1.114,1.097,1.131,0.0,3017,269
+mujer,C. Solo nunca fumadores: por ambiente,0.819,0.572,1.171,0.273,3017,269
+exp_any,D. Nunca+ex fumadores: expuesto vs no,0.81,0.509,1.288,0.373,4473,441
+edad,D. Nunca+ex fumadores: expuesto vs no,1.11,1.097,1.123,0.0,4473,441
+mujer,D. Nunca+ex fumadores: expuesto vs no,0.879,0.655,1.179,0.39,4473,441

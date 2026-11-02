@@ -1,0 +1,5 @@
+covariate,modelo,HR,IC_inf,IC_sup,p,n,muertes
+fuma,Circulatorio,1.018,0.625,1.657,0.943,3557,294
+fuma,Cáncer pulmón,5.729,1.557,21.078,0.009,3557,30
+fuma,Otros cánceres,0.749,0.452,1.241,0.261,3557,211
+fuma,Respiratorio,1.409,0.717,2.772,0.32,3557,115

@@ -1,0 +1,12 @@
+covariate,modelo,HR,IC_inf,IC_sup,p,n,muertes
+fuma,1. Sin ajustar,0.45,0.353,0.575,0.0,3557,973
+fuma,2. Ajustado edad+sexo,1.24,0.922,1.666,0.154,3557,973
+edad,2. Ajustado edad+sexo,1.102,1.092,1.112,0.0,3557,973
+mujer,2. Ajustado edad+sexo,0.784,0.639,0.963,0.02,3557,973
+ex,"3. Nunca/ex/actual, ajust.",1.229,0.968,1.56,0.091,3557,973
+actual,"3. Nunca/ex/actual, ajust.",1.322,0.976,1.79,0.072,3557,973
+edad,"3. Nunca/ex/actual, ajust.",1.102,1.092,1.112,0.0,3557,973
+mujer,"3. Nunca/ex/actual, ajust.",0.817,0.662,1.009,0.06,3557,973
+cig10,4. Dosis: +10 cig/día (solo actuales),1.189,0.847,1.67,0.316,932,139
+edad,4. Dosis: +10 cig/día (solo actuales),1.108,1.09,1.127,0.0,932,139
+mujer,4. Dosis: +10 cig/día (solo actuales),0.697,0.403,1.204,0.195,932,139

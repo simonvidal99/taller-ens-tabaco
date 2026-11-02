@@ -1,0 +1,22 @@
+# Datos crudos del Minsal (se descargan aparte; ver README)
+*.sav
+*.dta
+*.RData
+*.rar
+ENS_2003/
+ENS_2003.zip
+ENSSEX_2022_2023/
+BBDD_ENSSEX_2022_2023.zip
+descargas_minsal/
+taller/datos/*
+!taller/datos/LEEME_DATOS.md
+# Temporales
+.DS_Store
+.ipynb_checkpoints/
+__pycache__/
+*.aux
+*.log
+*.nav
+*.snm
+*.toc
+*.out

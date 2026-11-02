@@ -1,0 +1,5 @@
+covariate,modelo,HR,IC_inf,IC_sup,p,n,muertes
+actual,Circulatorio,1.169,0.426,3.204,0.762,6233,126
+actual,Cáncer pulmón,15.345,3.878,60.718,0.0,6233,16
+actual,Otros cánceres,1.699,0.789,3.657,0.176,6233,110
+actual,Respiratorio,3.497,0.793,15.427,0.098,6233,53
