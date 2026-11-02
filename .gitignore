@@ -9,7 +9,7 @@ ENSSEX_2022_2023/
 BBDD_ENSSEX_2022_2023.zip
 descargas_minsal/
 taller/datos/*
-!taller/datos/LEEME_DATOS.md
+!taller/datos/README.md
 # Temporales
 .DS_Store
 .ipynb_checkpoints/

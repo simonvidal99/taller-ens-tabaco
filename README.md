@@ -15,9 +15,9 @@ Encuesta Nacional de Salud (ENS) 2016-17 del Ministerio de Salud de Chile, cruza
 |---|---|---|
 | **Facilitador** (vas a dictar el taller) | [`taller/GUIA_FACILITADOR.md`](taller/GUIA_FACILITADOR.md): objetivos, tiempos, clave de respuestas, errores frecuentes | [`taller/taller_tabaco_FACILITADOR.ipynb`](taller/taller_tabaco_FACILITADOR.ipynb) (con soluciones) y la [presentación](taller/presentacion_taller_tabaco.pdf) |
 | **Quien quiere entender el análisis** (por ejemplo, para presentar la propuesta) | [`taller/PROPUESTA_ANALISIS.md`](taller/PROPUESTA_ANALISIS.md): explicación simple, glosario y preguntas probables | Los resultados en [`analisis/`](analisis/) |
-| **Participante** | [`taller/taller_tabaco_PARTICIPANTES.ipynb`](taller/taller_tabaco_PARTICIPANTES.ipynb): 14 ejercicios (histogramas, correlaciones, prevalencias y supervivencia) con espacio para tu código | [`taller/LEEME.md`](taller/LEEME.md) para ejecutarlo |
+| **Participante** | [`taller/taller_tabaco_PARTICIPANTES.ipynb`](taller/taller_tabaco_PARTICIPANTES.ipynb): 14 ejercicios (histogramas, correlaciones, prevalencias y supervivencia) con espacio para tu código | [`taller/README.md`](taller/README.md) para ejecutarlo |
 | **Quien solo quiere los resultados** | [`analisis/`](analisis/): tablas en CSV y gráficos | Sección [Resultados](#resultados-principales) más abajo |
-| **Quien quiere reproducir o auditar el análisis** | [`scripts/`](scripts/) y [`scripts/LEEME.md`](scripts/LEEME.md) | [`taller/datos/LEEME_DATOS.md`](taller/datos/LEEME_DATOS.md) para obtener los datos |
+| **Quien quiere reproducir o auditar el análisis** | [`scripts/`](scripts/) y [`scripts/README.md`](scripts/README.md) | [`taller/datos/README.md`](taller/datos/README.md) para obtener los datos |
 
 ## Qué hay en cada carpeta
 
@@ -80,7 +80,7 @@ El cuaderno del facilitador se ejecutó completo, sin errores, antes de subirlo 
 **Los datos no están en este repositorio.** Se descargan desde
 [epi.minsal.cl/bases-de-datos](https://epi.minsal.cl/bases-de-datos/): base **«ENS + Defunción (Mortalidad) 2023»**.
 El archivo se llama `.zip` pero es un **RAR**. Instrucciones completas en
-[`taller/datos/LEEME_DATOS.md`](taller/datos/LEEME_DATOS.md).
+[`taller/datos/README.md`](taller/datos/README.md).
 
 Condiciones de uso del Minsal: solo para investigación, citar la fuente y enviar copia de las publicaciones
 ([condiciones](https://epi.minsal.cl/condiciones-de-uso/)).
