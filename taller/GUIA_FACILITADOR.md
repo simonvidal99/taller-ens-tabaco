@@ -10,6 +10,7 @@ pregunta → datos → variables → prevalencias → asociación → sesgos →
 2. Calcular prevalencias ponderadas con IC 95%.
 3. Estimar una asociación con supervivencia (HR) y explicar por qué hay que ajustar por edad.
 4. Reconocer límites: poca potencia, causalidad inversa, definiciones propias de la exposición.
+5. Describir variables con histogramas (con y sin ponderar), distinguir media de mediana y leer una matriz de correlaciones sin confundirla con causalidad.
 
 ## 2. Antes del taller (checklist)
 - [ ] Descargar la base **«ENS + Defunción (Mortalidad) 2023»** de [epi.minsal.cl/bases-de-datos](https://epi.minsal.cl/bases-de-datos/)
@@ -28,21 +29,22 @@ pregunta → datos → variables → prevalencias → asociación → sesgos →
 | `taller_tabaco_PARTICIPANTES.ipynb` | participantes | Explicaciones + ejercicios con espacio en blanco |
 | `taller_tabaco_FACILITADOR.ipynb` | facilitador | Igual, con **soluciones y salidas ya ejecutadas** |
 
-Los participantes escriben 1–5 líneas por ejercicio. Las funciones `prevalencia()` y `cox()` ya vienen escritas; no
-se pide programar el diseño muestral, sí entender qué hace.
+Son 14 ejercicios. Los participantes escriben 1–5 líneas por ejercicio. Las funciones `prevalencia()`, `cox()`, `resumen()`,
+`cuantil_pond()` y `corr_pond()` ya vienen escritas; no se pide programar el diseño muestral ni la correlación ponderada, sí entender qué hacen.
+Las correlaciones y resúmenes ponderados son descriptivos: no traen intervalo de confianza.
 
-## 4. Propuesta de tiempos (≈ 2,5 h; recortable a 2 h omitiendo ejercicios 7 y 8)
+## 4. Propuesta de tiempos (≈ 3 h; recortable a 2,5 h omitiendo los ejercicios 3, 6 y 12)
 | Min | Bloque | Ejercicio | Qué subrayar |
 |---|---|---|---|
 | 0–15 | Presentación: pregunta, ética y condiciones de uso | — | Datos anónimos y públicos; citar y enviar copia al Minsal |
-| 15–35 | Conocer la base | 1 | Fila = persona; ponderador `Fexp_F1p_Corr`; estratos y conglomerados |
-| 35–50 | Construir variables | (lectura) | Cada definición es una decisión; «fumador pasivo» es **nuestra** definición |
-| 50–80 | Prevalencia | 2 y 3 | Por qué no basta el promedio simple (ver §6) |
+| 15–30 | Conocer la base y construir variables | 1 (+ lectura) | Fila = persona; ponderador `Fexp_F1p_Corr`; «fumador pasivo» es **nuestra** definición |
+| 30–55 | Parte A: distribuciones | 2 y 3 | Ponderar cambia el histograma; media contra mediana; valores redondos (5, 10, 20) |
+| 55–80 | Parte B: prevalencias | 4, 5 y 6 | Por qué no basta el promedio simple (ver §6); la definición de pasivo cambia el resultado |
 | 80–95 | Pausa | | |
-| 95–125 | Asociación con la muerte | 4 y 5 | **El resultado engañoso**: confusión por edad |
-| 125–145 | Fumadores activos, ex y pasivos | 6 | Mirar el número de muertes antes de concluir |
-| 145–165 | Sensibilidad y curvas | 7 y 8 | Causalidad inversa; comparar dentro de un grupo de edad |
-| 165–180 | Redactar y discutir | 9 + §8 | Qué falta para publicar |
+| 95–125 | Parte C: ¿se parecen los grupos? | 7 y 8 | Fumadores más jóvenes; la edad se correlaciona con casi todo; correlación no es causa |
+| 125–155 | Parte D: asociación con la muerte | 9, 10 y 11 | **El resultado engañoso**: confusión por edad; mirar el número de muertes antes de concluir |
+| 155–170 | Sensibilidad y curvas | 12 y 13 | Causalidad inversa; comparar dentro de un grupo de edad |
+| 170–185 | Redactar y discutir | 14 + §10 | Qué falta para publicar |
 
 ## 5. Clave de respuestas (resultados de referencia)
 Verificados al ejecutar el cuaderno del facilitador. Pueden variar en el último decimal según la versión de las librerías.
@@ -56,6 +58,17 @@ Verificados al ejecutar el cuaderno del facilitador. Pueden variar en el último
 | Por edad 15-24 / 25-44 / 45-64 / 65+ | 30,0% / 42,7% / 30,6% / 11,9% |
 | Fumador pasivo (no fuma actualmente y expuesto) | **25,9%** (23,1–28,6), n = 4.473 |
 | En el hogar / trabajo-estudio / otros (entre quienes no fuman) | 7,3% / 14,0% / 14,7% |
+
+**Distribuciones y correlaciones** (ejercicios 2, 3, 6, 7 y 8):
+
+| Ejercicio | Resultado de referencia |
+|---|---|
+| 2. Edad | Mediana 50 años en la muestra y 41 en la población ponderada (la muestra tiene más adultos mayores) |
+| 3. Cigarrillos al día (n = 1.314 fumadores) | Media 12,7; mediana 7 (cuartiles 4 y 15); 35% declara exactamente 5, 10 o 20 |
+| 3. Edad de inicio (n = 3.189) | Media 17,6; mediana 17 (cuartiles 15 y 19) |
+| 6. Horas de humo ajeno (no fuman, n = 4.473) | 74,1% sin exposición; mediana 2 h entre expuestos. Pasivo con ≥ 1 h: 25,9%; ≥ 2 h: 14,9%; ≥ 5 h: 4,9% |
+| 7. Edad media, no fuma / fuma | Ponderada 45,0 / 39,3; sin ponderar 51,2 / 43,1 |
+| 8. Correlaciones (Spearman ponderada) | Edad con colesterol 0,28, con IMC 0,24, con edad de inicio 0,18, con exposición en el trabajo −0,17 y en otros lugares −0,19. Entre exposiciones: 0,29 a 0,38. Cigarrillos al día con horas en casa: 0,18 |
 
 **Mortalidad** (n = 6.233; 539 muertes; seguimiento mediano 7,1 años):
 
@@ -75,12 +88,20 @@ Verificados al ejecutar el cuaderno del facilitador. Pueden variar en el último
 1. **Peso y diseño muestral.** Un promedio simple no representa a Chile. Sin ponderar, la prevalencia de fumadores sale
    **28,2%** en vez de 32,5%. Y el IC con diseño es el doble de ancho que el de una muestra aleatoria simple
    (30,4–34,6, ancho 4,2 puntos, frente a 27,1–29,4, ancho 2,2 puntos): ignorar el diseño da una precisión falsa.
-2. **Confusión (ejercicio 4 → 5).** Fumadores: 5,6% fallecidos; no fumadores: 9,9% (¡aparente efecto protector!).
-   La edad media es 43,1 vs 51,2 años. Al ajustar, el HR pasa de 0,66 a 1,83.
+2. **Confusión (ejercicios 7 → 9 → 10).** Primero se ve que los fumadores son más jóvenes (ejercicio 7), luego que parecen
+   morir menos: 5,6% fallecidos contra 9,9% (¡aparente efecto protector!). La edad media es 43,1 contra 51,2 años (sin ponderar).
+   Al ajustar, el HR pasa de 0,66 a 1,83.
 3. **Potencia.** Solo 24 muertes entre los fumadores pasivos. *Ausencia de evidencia no es evidencia de ausencia.* Pedir
    que redacten la conclusión sin afirmar «el tabaco pasivo no hace daño».
 4. **Definir la exposición.** Probar otra definición de «pasivo» (p. ej. solo exposición en el hogar) y ver si cambia.
-5. **Causalidad inversa y sesgo de supervivencia.** Ejercicio 7 y curvas.
+5. **Causalidad inversa y sesgo de supervivencia.** Ejercicios 12 y 13.
+6. **Mirar antes de modelar (ejercicios 2 y 3).** Un histograma ponderado dibuja Chile; uno sin ponderar dibuja la muestra. Con
+   asimetría la media (12,7 cigarrillos) engaña; la mediana (7) describe mejor a la persona típica. Los valores se amontonan en
+   5, 10 y 20: la gente redondea.
+7. **Correlación no es causa (ejercicio 8).** La edad es la variable que más se mueve con las otras; eso es una razón para
+   ajustar, no una prueba de efecto. Una correlación de 0,28 es débil: el diagrama de dispersión se ve como una nube.
+   Pregunta útil: ¿por qué hay correlación negativa entre la edad y la exposición en el trabajo? (Los mayores están
+   jubilados o en ambientes más protegidos: es una explicación, no un hecho que los datos demuestren.)
 
 ## 7. Errores frecuentes
 - Usar un ponderador equivocado. Para el cuestionario F1 (tabaco) es `Fexp_F1p_Corr`; los exámenes de sangre usan otros.
@@ -88,6 +109,10 @@ Verificados al ejecutar el cuaderno del facilitador. Pueden variar en el último
 - Olvidar que `fuma_actual` tiene valores perdidos (`NaN`); verificar el `n` de cada análisis.
 - Leer `ta3` como número: viene codificado; el cuaderno mapea las etiquetas.
 - Comparar HR sin fijar el grupo de referencia.
+- Dibujar un histograma sin `weights=` y concluir sobre «Chile»: describe solo a quienes respondieron.
+- Leer una correlación como causa, o creer que un valor cercano a 0 prueba que no hay relación (solo mide relación monótona).
+- Olvidar que `cig_dia` solo existe para fumadores actuales y `edad_inicio` para quienes alguna vez fumaron: las correlaciones
+  con ellas usan menos casos.
 
 ## 8. Limitaciones de este material (decláralas)
 - **Tabaco medido una vez**, al inicio del seguimiento.
