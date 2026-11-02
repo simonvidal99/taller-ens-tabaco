@@ -1,12 +1,5 @@
 # Taller: tabaco y riesgo de muerte con la Encuesta Nacional de Salud (Chile)
 
-> **English summary.** Workshop materials on *how to do research with existing databases*, using Chile's
-> National Health Survey (ENS) 2016-17 linked to death records through 2023. It answers two questions:
-> (1) what is the prevalence of smokers and passive smokers, and (2) is tobacco exposure associated with mortality?
-> Includes participant and facilitator notebooks (Python), a facilitator guide, a Beamer slide deck (PDF),
-> result tables and the analysis scripts. **The raw survey data are not included**; see [Datos](#datos).
-> Documentation is in Spanish.
-
 Material para un taller sobre **cómo investigar con bases de datos existentes**, usando la
 Encuesta Nacional de Salud (ENS) 2016-17 del Ministerio de Salud de Chile, cruzada con defunciones hasta 2023.
 
