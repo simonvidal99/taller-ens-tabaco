@@ -59,14 +59,12 @@ Antes de calcular riesgos, el taller mira la forma de los datos con histogramas 
 
 | Qué se mira | Qué se ve (ENS 2016-17) | Para qué sirve en nuestra pregunta |
 | --- | --- | --- |
-| Histograma de edad, sin ponderar y ponderado | Mediana de 50 años en la muestra y de 41 en la población | Muestra por qué hay que usar el peso: la muestra tiene más adultos mayores que Chile |
-| Cigarrillos al día (fumadores actuales) | Mediana 7, media 12,7; 35% declara exactamente 5, 10 o 20 | Distribución asimétrica: la media exagera, y la gente redondea lo que declara |
-| Edad de inicio | Mediana 17 años (la mitad empezó entre los 15 y los 19) | Describe el hábito: casi todo el mundo parte en la adolescencia |
+| Histograma de edad, sin ponderar y ponderado | Mediana de 50 años en la muestra y de 41 en la población; los de 65+ son 24% de la muestra y 13% de Chile | Muestra por qué hay que usar el peso: sin él, la prevalencia sale 28,2% en vez de 32,5% |
 | Horas de humo ajeno (quienes no fuman) | 74% no tiene exposición; entre expuestos la mediana es 2 horas | Justifica la definición de pasivo; con ≥ 1 h es 25,9%, con ≥ 2 h 14,9% y con ≥ 5 h 4,9% |
 | Histograma de edad, fumadores contra no fumadores | Edad media ponderada de 39 contra 45 años | Anticipa el resultado engañoso: los fumadores son más jóvenes, así que mueren menos sin ajustar |
-| Mapa de correlaciones | Edad con colesterol 0,28, con IMC 0,24 y con exposición en el trabajo −0,17 | La edad se mueve junto con casi todo, así que hay que ajustar por ella |
+| Mapa de correlaciones (ejercicio opcional) | Edad con colesterol 0,28, con IMC 0,24 y con exposición en el trabajo −0,17 | La edad se mueve junto con casi todo, así que hay que ajustar por ella |
 
-Las tres exposiciones al humo (casa, trabajo y otros lugares) se correlacionan entre sí (0,29 a 0,38): quien está expuesto en un lugar suele estarlo en otros. Y quienes fuman más cigarrillos al día también están más expuestos al humo en casa (0,18).
+Las tres exposiciones al humo (casa, trabajo y otros lugares) se correlacionan entre sí (0,29 a 0,38): quien está expuesto en un lugar suele estarlo en otros.
 
 Las correlaciones son de Spearman, ponderadas. Son descriptivas: no tienen intervalo de confianza y no prueban causa.
 
@@ -96,7 +94,7 @@ El análisis muestra asociación, no causa, y tiene límites que conviene declar
 | --- | --- |
 | ¿Por qué no promediar sin más? | Sin ponderar, los fumadores salen 28,2% en vez de 32,5%, y el intervalo se ve el doble de angosto de lo que corresponde |
 | ¿Esto prueba que fumar mata? | No. Es un estudio observacional. Ajustamos por edad y sexo, pero faltan nivel socioeconómico, alcohol y enfermedades previas |
-| ¿Y si los enfermos ya habían dejado de fumar? | Es la causalidad inversa. Al excluir las muertes de los primeros 2 años el HR sigue en 2,00 (1,39–2,88) |
+| ¿Y si los enfermos ya habían dejado de fumar? | Es la causalidad inversa. En el análisis completo (fuera del taller), al excluir las muertes de los primeros 2 años el HR sigue en 2,00 (1,39–2,88) |
 | ¿Por qué no hay efecto en los fumadores pasivos? | Hay 24 muertes en ese grupo: falta poder estadístico, no hay evidencia de que sea inocuo |
 | ¿Las correlaciones prueban algo? | Solo describen qué variables van juntas. Una correlación de 0,28 entre edad y colesterol no dice que la edad cause el colesterol por sí sola |
 | ¿El tabaco se midió bien? | Una sola vez, al inicio, y por autorreporte. Quien cambió de hábito después queda mal clasificado |
@@ -108,18 +106,18 @@ Uso de los datos: son públicos y anonimizados, pero el Minsal pide usarlos solo
 
 ## Cómo se desarrolla el taller
 
-El taller dura unas 3 horas, con 14 ejercicios en un cuaderno de Python; se recorta a 2,5 horas omitiendo los ejercicios 3, 6 y 12. Los participantes escriben entre una y cinco líneas por ejercicio: las funciones complejas ya vienen escritas.
+El taller dura unas 2 h 15 min, con 9 ejercicios en un cuaderno de Python; baja a 1 h 50 min sin el ejercicio 5 (opcional) y el 9. Los participantes escriben entre una y cinco líneas por ejercicio: las funciones complejas ya vienen escritas. La presentación se usa en bloques cortos y en paralelo al cuaderno: el contexto antes de programar y los resultados después, para comparar.
 
-| Minutos | Bloque | Ejercicios |
+| Minutos | Bloque | Cuaderno |
 | --- | --- | --- |
-| 0–15 | Presentación: pregunta, ética y condiciones de uso | — |
-| 15–30 | Conocer la base | 1 |
-| 30–55 | Parte A: distribuciones (histogramas) | 2 y 3 |
-| 55–80 | Parte B: prevalencias | 4, 5 y 6 |
-| 80–95 | Pausa | — |
-| 95–125 | Parte C: ¿se parecen los grupos? Edad y correlaciones | 7 y 8 |
-| 125–155 | Parte D: asociación con la muerte | 9, 10 y 11 |
-| 155–170 | Sensibilidad y curvas de supervivencia | 12 y 13 |
-| 170–185 | Redactar el párrafo de resultados y discutir | 14 |
+| 0–15 | Presentación: pregunta, base, variables y condiciones de uso | — |
+| 15–25 | Conocer la base y qué es el peso | Ejemplo resuelto |
+| 25–40 | ¿Por qué ponderar? | Ejercicio 1 |
+| 40–60 | Prevalencias de fumadores y de fumadores pasivos | Ejercicios 2 y 3 |
+| 60–70 | Pausa | — |
+| 70–85 | ¿Se parecen los grupos? Edad y correlaciones | Ejercicio 4 (y 5 opcional) |
+| 85–110 | Asociación con la muerte: HR y ajuste por edad | Ejercicios 6, 7 y 8 |
+| 110–120 | Curvas de supervivencia | Ejercicio 9 |
+| 120–135 | Discusión y cierre | Preguntas para discutir |
 
-**Materiales:** el cuaderno de participantes, el cuaderno del facilitador con soluciones, la guía del facilitador y una presentación de 19 diapositivas. Los datos se descargan aparte desde el Minsal.
+**Materiales:** el cuaderno de participantes, el cuaderno del facilitador con soluciones, la guía del facilitador y una presentación de 17 diapositivas. Los datos se descargan aparte desde el Minsal.

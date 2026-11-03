@@ -15,7 +15,7 @@ Encuesta Nacional de Salud (ENS) 2016-17 del Ministerio de Salud de Chile, cruza
 |---|---|---|
 | **Facilitador** (vas a dictar el taller) | [`taller/GUIA_FACILITADOR.md`](taller/GUIA_FACILITADOR.md): objetivos, tiempos, clave de respuestas, errores frecuentes | [`taller/taller_tabaco_FACILITADOR.ipynb`](taller/taller_tabaco_FACILITADOR.ipynb) (con soluciones) y la [presentación](taller/presentacion_taller_tabaco.pdf) |
 | **Quien quiere entender el análisis** (por ejemplo, para presentar la propuesta) | [`taller/PROPUESTA_ANALISIS.md`](taller/PROPUESTA_ANALISIS.md): explicación simple, glosario y preguntas probables | Los resultados en [`analisis/`](analisis/) |
-| **Participante** | [`taller/taller_tabaco_PARTICIPANTES.ipynb`](taller/taller_tabaco_PARTICIPANTES.ipynb): 14 ejercicios (histogramas, correlaciones, prevalencias y supervivencia) con espacio para tu código | [`taller/README.md`](taller/README.md) para ejecutarlo |
+| **Participante** | [`taller/taller_tabaco_PARTICIPANTES.ipynb`](taller/taller_tabaco_PARTICIPANTES.ipynb): 9 ejercicios (pesos, prevalencias, histogramas, correlaciones y supervivencia) con espacio para tu código | [`taller/README.md`](taller/README.md) para ejecutarlo |
 | **Quien solo quiere los resultados** | [`analisis/`](analisis/): tablas en CSV y gráficos | Sección [Resultados](#resultados-principales) más abajo |
 | **Quien quiere reproducir o auditar el análisis** | [`scripts/`](scripts/) y [`scripts/README.md`](scripts/README.md) | [`taller/datos/README.md`](taller/datos/README.md) para obtener los datos |
 
@@ -28,7 +28,7 @@ Encuesta Nacional de Salud (ENS) 2016-17 del Ministerio de Salud de Chile, cruza
 │   ├── GUIA_FACILITADOR.md            guía: tiempos, clave de respuestas, puntos de enseñanza
 │   ├── taller_tabaco_PARTICIPANTES.ipynb   ejercicios en blanco (se reparte)
 │   ├── taller_tabaco_FACILITADOR.ipynb     igual, con soluciones y salidas ejecutadas
-│   ├── presentacion_taller_tabaco.pdf      presentación (19 diapositivas; aún no incluye los ejercicios de distribuciones y correlaciones)
+│   ├── presentacion_taller_tabaco.pdf      presentación (17 diapositivas)
 │   ├── presentacion/                  fuente LaTeX (Beamer) y figuras
 │   └── datos/                         aquí va el .sav descargado (no incluido)
 ├── analisis/                          resultados en CSV y gráficos
@@ -73,7 +73,7 @@ Y «no encontramos asociación» en fumadores pasivos refleja poca potencia, no 
 2. Abrir un cuaderno en Jupyter o en [Google Colab](https://colab.research.google.com/) (en Colab, subir el `.sav`).
 3. Ejecutar las celdas en orden. La primera instala las librerías: `pandas numpy scipy pyreadstat lifelines matplotlib`.
 
-El cuaderno del facilitador se ejecutó completo, sin errores, antes de subirlo (incluye 4 histogramas, 1 mapa de correlaciones y 1 diagrama de dispersión).
+El cuaderno del facilitador se ejecutó completo, sin errores, antes de subirlo (incluye histogramas, un mapa de correlaciones y curvas de supervivencia).
 
 ## Datos
 
