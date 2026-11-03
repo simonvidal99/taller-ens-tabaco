@@ -28,6 +28,7 @@ Encuesta Nacional de Salud (ENS) 2016-17 del Ministerio de Salud de Chile, cruza
 │   ├── GUIA_FACILITADOR.md            guía: tiempos, clave de respuestas, puntos de enseñanza
 │   ├── taller_tabaco_PARTICIPANTES.ipynb   ejercicios en blanco (se reparte)
 │   ├── taller_tabaco_FACILITADOR.ipynb     igual, con soluciones y salidas ejecutadas
+│   ├── taller_tabaco_RESUELTO.ipynb        versión neutra: paso a paso, explicaciones y soluciones
 │   ├── presentacion_taller_tabaco.pdf      presentación (17 diapositivas)
 │   ├── presentacion/                  fuente LaTeX (Beamer) y figuras
 │   └── datos/                         aquí va el .sav descargado (no incluido)

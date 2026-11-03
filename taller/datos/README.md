@@ -1,5 +1,7 @@
 # Datos (no incluidos en el repositorio)
 
+**¿Primera vez? Sigue el [tutorial paso a paso](TUTORIAL_DESCARGA.md)** (Windows, Mac y Google Colab). Abajo, el resumen.
+
 Descargar la base **«ENS + Defunción (Mortalidad) 2023»** desde https://epi.minsal.cl/bases-de-datos/
 (enlace directo: https://epi.minsal.cl/wp-content/uploads/2026/07/Base_ENS_Mortalidad_2023.zip).
 

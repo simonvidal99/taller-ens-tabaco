@@ -5,6 +5,7 @@
 | `GUIA_FACILITADOR.md` | Objetivos, tiempos, clave de respuestas y puntos de enseñanza |
 | `taller_tabaco_PARTICIPANTES.ipynb` | Cuaderno con ejercicios en blanco (para repartir) |
 | `taller_tabaco_FACILITADOR.ipynb` | Mismo cuaderno con soluciones y salidas ejecutadas |
+| `taller_tabaco_RESUELTO.ipynb` | Versión neutra: paso a paso, explicaciones, soluciones y salidas ejecutadas, sin indicaciones de uso |
 | `presentacion_taller_tabaco.pdf` | Presentación (Beamer, 17 diapositivas); fuente en `presentacion/` |
 | `datos/` | Base «ENS 2016-17 + defunciones 2023» del Minsal (34 MB, `.sav`) |
 

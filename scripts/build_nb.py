@@ -1,4 +1,4 @@
-"""Construye los dos cuadernos del taller (participantes y facilitador) desde una sola fuente."""
+"""Construye los tres cuadernos del taller (participantes, facilitador y versión resuelta neutra) desde una sola fuente."""
 import sys, nbformat as nbf
 
 OUT = "/Users/simonvidal/Desktop/workshop medi/taller/"
@@ -6,7 +6,7 @@ OUT = "/Users/simonvidal/Desktop/workshop medi/taller/"
 def md(t): return nbf.v4.new_markdown_cell(t.strip())
 def code(t): return nbf.v4.new_code_cell(t.strip())
 
-def build(facilitador: bool):
+def build(facilitador: bool, tipo=None):
     c = []
     claves = ["pesos", "prev", "pasivo", "grupos", "corr", "enganoso", "ajuste", "cuatro", "km"]
     N = {k: i + 1 for i, k in enumerate(claves)}   # numeración única; las referencias cruzadas la usan
@@ -15,7 +15,7 @@ def build(facilitador: bool):
         c.append(md(f"### ✏️ Ejercicio {N[clave]} — {titulo}\n\n{enunciado}\n\n> **Pista:** {pista}"))
         c.append(code(solucion if facilitador else stub))
 
-    tipo = "FACILITADOR (con soluciones)" if facilitador else "PARTICIPANTES"
+    tipo = tipo or ("FACILITADOR (con soluciones)" if facilitador else "PARTICIPANTES")
     c.append(md(f"""
 # Taller: investigar con bases de datos existentes
 ## Tabaco (activo y pasivo) y riesgo de muerte — Encuesta Nacional de Salud 2016-17
@@ -408,5 +408,6 @@ plt.show()
     return nb
 
 if __name__ == "__main__":
-    for fac, name in [(False, "taller_tabaco_PARTICIPANTES.ipynb"), (True, "taller_tabaco_FACILITADOR.ipynb")]:
-        nbf.write(build(fac), OUT + name); print("escrito", name)
+    for fac, tipo, name in [(False, None, "taller_tabaco_PARTICIPANTES.ipynb"), (True, None, "taller_tabaco_FACILITADOR.ipynb"),
+                            (True, "resuelta (paso a paso, con explicaciones y pauta de resolución)", "taller_tabaco_RESUELTO.ipynb")]:
+        nbf.write(build(fac, tipo), OUT + name); print("escrito", name)
