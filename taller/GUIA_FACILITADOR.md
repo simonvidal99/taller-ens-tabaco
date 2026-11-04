@@ -32,8 +32,8 @@ Los análisis más avanzados (por ejemplo, excluir muertes tempranas para descar
 | `taller_tabaco_FACILITADOR.ipynb` | facilitador | Igual, con **soluciones y salidas ya ejecutadas** |
 | `presentacion_taller_tabaco.pdf` | facilitador | 17 diapositivas: contexto, resultados y limitaciones |
 
-Los participantes escriben 1–5 líneas por ejercicio. Las funciones `prevalencia()`, `cox()`, `resumen()`,
-`cuantil_pond()` y `corr_pond()` ya vienen escritas; no se pide programar el diseño muestral ni la correlación ponderada, sí entender qué hacen.
+Los participantes escriben 1–5 líneas por ejercicio. Las funciones `prevalencia()`, `cox()`, `resumen_ponderado()`,
+`cuantil_ponderado()` y `correlacion_ponderada()` ya vienen escritas; no se pide programar el diseño muestral ni la correlación ponderada, sí entender qué hacen.
 Las correlaciones y resúmenes ponderados son descriptivos: no traen intervalo de confianza.
 
 **La sección 1 del cuaderno** (conocer la base, qué es el peso) **y la sección 2** (variables) se muestran como ejemplo resuelto: se ejecutan y se comentan, no se piden como ejercicio.
@@ -126,7 +126,7 @@ Verificados al ejecutar el cuaderno del facilitador. Pueden variar en el último
 - Leer `ta3` como número: viene codificado; el cuaderno mapea las etiquetas.
 - Comparar HR sin fijar el grupo de referencia.
 - Leer una correlación como causa, o creer que un valor cercano a 0 prueba que no hay relación (solo mide relación monótona).
-- Olvidar que `cig_dia` solo existe para fumadores actuales: las correlaciones con ella usan menos casos.
+- Olvidar que `cigarrillos_dia` solo existe para fumadores actuales: las correlaciones con ella usan menos casos.
 
 ## 8. Limitaciones de este material (decláralas)
 - **Tabaco medido una vez**, al inicio del seguimiento.
@@ -142,6 +142,6 @@ Verificados al ejecutar el cuaderno del facilitador. Pueden variar en el último
 - Repetir con otra variable de resultado (hipertensión, diabetes, obesidad).
 - Cambiar la definición de «fumador pasivo» y comparar.
 - Analizar por sexo o por zona.
-- Dosis y riesgo: ¿sube el riesgo con los cigarrillos al día (`cig_dia`)?
+- Dosis y riesgo: ¿sube el riesgo con los cigarrillos al día (`cigarrillos_dia`)?
 - Contrastar con la ENS 2009-10 y 2003 (misma base de mortalidad, otros `.sav`).
 - Hospitalizaciones: la base **«ENS con egresos hospitalarios»** ([minuta](https://epi.minsal.cl/bases-de-datos/)) permite estudiar ingresos por causa.
